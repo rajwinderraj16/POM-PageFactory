@@ -11,7 +11,7 @@ namespace PageFactorywithPageObject
     public class Login
     {
         IWebDriver driver;
-       
+         
         public Login(IWebDriver driver)
         {
 
@@ -52,7 +52,7 @@ namespace PageFactorywithPageObject
             LastName.SendKeys("kaur");
 
             Thread.Sleep(2000);
-            Address.SendKeys("coates road");
+            Address.SendKeys("Auckland");
 
             Thread.Sleep(2000);
             Emailaddress.SendKeys("kaur123@gmail.com");
@@ -66,15 +66,15 @@ namespace PageFactorywithPageObject
             Thread.Sleep(2000);
             Hobbies.Click();
 
-            
+
             Thread.Sleep(2000);
             Skills.Click();
 
             Thread.Sleep(2000);
             Country.Click();
 
-           // Thread.Sleep(3000);
-           // SelectCountry.Click();
+            // Thread.Sleep(3000);
+            // SelectCountry.Click();
 
             Thread.Sleep(2000);
             year.Click();
@@ -96,9 +96,12 @@ namespace PageFactorywithPageObject
 
             Thread.Sleep(2000);
             savebutton.Click();
-
         }
+       
+
+
     }
+
 }
 
 

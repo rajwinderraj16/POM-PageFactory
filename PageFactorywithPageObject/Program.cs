@@ -7,26 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PageFactorywithPageObject
+namespace PageFactorywithPageObject 
 {
-    public class Program
+   
+    [TestFixture]
+   public class Program 
     {
-        public static void Main(String []args)
-        {
-            
-            
-                IWebDriver driver = new ChromeDriver();
+
+        IWebDriver driver;
+        
+        
+        [SetUp]
+            public void LauchWebPage()
+            { 
+                driver = new ChromeDriver();
                 driver.Manage().Window.Maximize();
                 driver.Navigate().GoToUrl("http://demo.automationtesting.in/Register.html");
 
+            }
+        [Test]
+        public void TestLogin()
+        {
+            
+            Login lg = new Login(driver);
+            lg.RegisterUser();
+        }
 
-                //Login lg = new Login(driver);
-                //lg.RegisterUser();
-
+            [Test]
+            public void Testtable()
+            { 
                 Table table = new Table(driver);
                 table.tab();
 
             }
+            
+           
         }
 
     }
